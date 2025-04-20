@@ -99,6 +99,25 @@ return function(Config)
 		})
 	})
 
+	if Config.Icon then
+		local iconImage = tostring(Config.Icon)
+		if tonumber(Config.Icon) then
+			iconImage = "rbxassetid://" .. iconImage
+		end
+	
+		TitleBar.Icon = New("ImageLabel", {
+			Name = "Icon",
+			Image = iconImage,
+			Size = UDim2.fromOffset(16, 16),
+			BackgroundTransparency = 1,
+			Parent = TitleBar.TitleHolder,
+			ThemeTag = {
+				ImageColor3 = "Text"
+			},
+			LayoutOrder = 0,
+		})
+	end
+
 	TitleBar.Title = New("TextLabel", {
 		RichText = true,
 		Text = Config.Title,

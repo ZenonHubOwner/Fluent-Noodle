@@ -165,7 +165,7 @@ return function(Config)
 	end)
 
 	-- Searchbox would take alot of time
-	--[[ 
+
 	TitleBar.SearchBox = New("TextBox", {
 		AnchorPoint = Vector2.new(1, .5),
 		Parent = TitleBar.Frame,
@@ -234,7 +234,6 @@ return function(Config)
 			.65, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0, true)
 		end
 	end)
-	]]
 
 	return TitleBar
 end
